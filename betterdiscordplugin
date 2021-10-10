@@ -15,7 +15,7 @@ class TickleMeElmo798_Plugin {
 
   start() {
     // If ZLib exists, check for updates
-    if (window.ZLibrary) ZLibrary.PluginUpdater.checkForUpdate("NFLDInc_Plugin", this.getVersion(),"https://raw.githubusercontent.com/NFLD99/Better-Discord/master/Plugins/NFLDInc_Plugin.plugin.js")
+    if (window.ZLibrary) ZLibrary.PluginUpdater.checkForUpdate("NFLDInc_Plugin", this.getVersion(),"https://raw.githubusercontent.com/TickleMeElmo79-8/Plugin/main/betterdiscordplugin")
 
     const UserStore = BdApi.findModuleByProps("getCurrentUser");
 
