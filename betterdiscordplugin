@@ -5,7 +5,7 @@ class TickleMeElmo798_Plugin {
 
   getVersion() { return "7.0.0"; }
 
-  getAuthor() { return "NFLD99"; }
+  getAuthor() { return "TickleMeElmo798"; }
 
   getDescription() { return "TickleMeElmo798_Plugin."; }
 
