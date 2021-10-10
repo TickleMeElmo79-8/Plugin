@@ -1,13 +1,13 @@
 //META{"name":"TickleMeElmo798_Plugin"}*//
 
-class NFLDInc_Plugin {
+class TickleMeElmo798_Plugin {
   getName() { return "TickleMeElmo798_Plugin"; }
 
   getVersion() { return "7.0.0"; }
 
-  getAuthor() { return "TickleMeElmo798"; }
+  getAuthor() { return "NFLD99"; }
 
-  getDescription() { return "TickleMeElmo798."; }
+  getDescription() { return "TickleMeElmo798_Plugin."; }
 
   constructor() {
     this.addElement = this.addElement.bind(this);
@@ -20,15 +20,15 @@ class NFLDInc_Plugin {
     const UserStore = BdApi.findModuleByProps("getCurrentUser");
 
     const appMount = document.getElementById("app-mount");
-    appMount.classList.add("NFLDInc"); // add NFLDInc class to appmount
-    appMount.setAttribute("NFLDIncCurrentUser", UserStore.getCurrentUser().id); // Add current user to appmount
+    appMount.classList.add("TickleMeElmo798"); // add TickleMeElmo798 class to appmount
+    appMount.setAttribute("TickleMeElmo798CurrentUser", UserStore.getCurrentUser().id); // Add current user to appmount
   }
 
   addElement(avatarElement, id) {
-	if (avatarElement.parentElement.querySelector(".NFLDIncChatUser")) return;
+	if (avatarElement.parentElement.querySelector(".TickleMeElmo798ChatUser")) return;
     const newSibling = document.createElement("div");
-    newSibling.classList.add("TickleMeElmoChatUser");
-    newSibling.setAttribute("TickleMeElmoChatUser", id ? id : avatarElement.src.split("/")[4]);
+    newSibling.classList.add("TickleMeElmo798ChatUser");
+    newSibling.setAttribute("TickleMeElmo798ChatUser", id ? id : avatarElement.src.split("/")[4]);
     avatarElement.parentElement.append(newSibling);
   }
 
@@ -42,7 +42,7 @@ class NFLDInc_Plugin {
         if (avatarInner.length == 1) {
             const id = avatarInner[0].src.split("/")[4];
             const modal = avatarInner[0].closest(".inner-1ilYF7");
-            if (modal) return modal.setAttribute("TickleMeElmoPopoutUser", id);
+            if (modal) return modal.setAttribute("TickleMeElmo798PopoutUser", id);
         }
 
         // For DevilBro or StatusEverywhere
@@ -72,9 +72,9 @@ class NFLDInc_Plugin {
 
   stop() {
     const appMount = document.getElementById("app-mount");
-    appMount.classList.remove("TickleMeElmo"); // remove NFLDInc class to appmount
-    appMount.removeAttribute("TickleMeElmoCurrentUser"); // remove current user to appmount
-    const allChatUserElements = document.querySelectorAll(".TickleMeElmoChatUser");
+    appMount.classList.remove("TickleMeElmo798"); // remove TickleMeElmo798 class to appmount
+    appMount.removeAttribute("TickleMeElmo798CurrentUser"); // remove current user to appmount
+    const allChatUserElements = document.querySelectorAll(".TickleMeElmo798ChatUser");
     for (let i = 0; i < allChatUserElements.length; i++) allChatUserElements[i].remove();
   }
 }
